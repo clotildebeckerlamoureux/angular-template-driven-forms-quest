@@ -12,8 +12,8 @@ import { User } from '../classes/user.model';
 })
 export class SignUpComponent {
   onSubmit():void {
-    console.log("it works")
+    console.log(this.newUser)
   }
 
-  newUser: User = new User('', '', '', '')
+  newUser = new User('', '', '', '')
 }
