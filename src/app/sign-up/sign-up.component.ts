@@ -15,5 +15,14 @@ export class SignUpComponent {
     console.log(this.newUser)
   }
 
-  newUser = new User('', '', '', '')
+  newUser: User = new User('', '', '', '')
+
+  passwordContainsLowerCase():boolean {
+    let lowerCase = this.newUser.password.match(/[a-z]/)
+    if (lowerCase?.length !== 0) {
+      return true
+    } else { 
+      return false
+    }
+  }
 }
